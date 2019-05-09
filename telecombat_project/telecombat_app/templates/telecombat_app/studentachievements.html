@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+<html >
+  <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+  <style>
+  #ash{ padding-bottom:22%;
+      font-family:'Alfa Slab One', cursive;
+    }
+
+  #sh{ padding-bottom:16%;
+      font-family:'Alfa Slab One', cursive;
+  }
+  #s{ padding-bottom:18%;
+      font-family:'Alfa Slab One', cursive;
+  }
+  #a{ padding-bottom:20%;
+      font-family:'Alfa Slab One', cursive;
+  }
+  #abt{
+    font-family:'Alfa Slab One', cursive;
+  }
+  body{
+    border:20px solid black;
+   background:url(https://images.pexels.com/photos/2078271/pexels-photo-2078271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+      background-size:cover;
+  }
+  table{
+    margin:auto;
+  }
+  .jumbotron{
+    font-family:'Alfa Slab One', cursive;
+    text-align:center;
+    border:10px solid black;
+
+  }
+  span{
+    color:orange;
+  }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="navbar-header">
+      <a href="{% url 'index'%}"  class="navbar-brand"><b>HOME</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+          <li><a href="{%url 'telecombat_app:departmentactivities'%}"><b>DEPARTMENT ACTIVITIES</b></a></li>
+          <li><a href=" {%url 'telecombat_app:studentachievements'%}"><b>STUDENT ACHIEVEMENTS</b></a></li>
+              <li><a href=" {%url 'telecombat_app:telecombat19'%}"><b>TELECOMBAT-19</b></a></li>
+      <li><a href=" {%url 'telecombat_app:telecombat18'%}"><b>GALLERY</b></a></li>
+
+
+  </ul>
+  </nav>
+<div class="container">
+<div  class="jumbotron">
+  <h1>STUDENT<span>ACHIEVEMENTS</span></h1>
+
+</div>
+<p id="abt">The department of Telecommunication Engineering offers four year UG program.Research carried out in department
+  has resulted in over 70 Peer Reviewed Journal publications,34 National Conference publications and 134 student publications.
+  The quality of students is reflected in good on-campus/off-campus recruitments together with their securing admissions for higher education in prestigious Universities around the globe.</p>
+</div>
+<div class="container">
+<table>
+  <tr>
+    <td> <img src="{% static "images/upse.jpg" %}"  width="400" height="300" class="thumbnail"></td>
+    <td id="ash"><span>ASHWIJA B V</span>,our 2014 batch student secured All India Rank-423 in
+      UPSC 2018 Civil Services Exam.
+</td>
+ <tr>
+   <td>  <img src="{% static "images/Sahana.jpg" %}"  width="400" height="300"class="thumbnail"> </td>
+   <td id="sh"> <span>SAHANA BALKAL</span> ,our 2009 batch student pursued post graduation in Public Administration  as well as in Environmental law.She has worked as sub editor in the editorial team of state level daily news paper
+She secured high marks in Karnataka Public Service Examination (2nd for state)and is now serving  as Assistant Commissioner of commercial tax for government of Karnataka.
+She has also received Rashtrapati Guide Award from Late Dr. A.P.J Abdul Kalam and Guide Rajya Puraskar from V.S. Ramadevi,former Governor of Karnataka.</td>
+</tr>
+<tr>
+  <td>  <img src="{% static "images/anil.jpg" %}"  width="400" height="300"class="thumbnail" ></td>
+  <td id ="a"><span>ANIL BS</span>,our 2018 batch student is currently serving as a Machine Learning Consultant at Adapt Ready.
+  His areas of expertise include Python,Embedded Systems,IOT,Machine Learning and Linux.
+He has been actively associated with the department and is mentoring the students by conducting programming sessions and workshops.</td>
+</tr>
+<tr>
+  <td>  <img src="{% static "images/suyash.jpg" %}"  width="400" height="300"class="thumbnail"></td>
+  <td id="s"> <span>SUYASH BHATT</span> ,our 2012 batch student is the
+			Director, Suyash Nutraceutical Foods Pvt ltd.
+			Director, MCB Agrotech Pvt. Ltd.
+			Chief Marketing Officer, Techno Lab.<br>
+      He has served for 5.5 years at TEKTRONIX,INC
+      as Senior Software Design Engineer.During the
+   program he was an active IEEE member and IET member.
+   Recently,he has been selected for pursuing MBA in University of Cambridge.
+
+
+ </td>
+</tr>
+
+  </body>
+</html>

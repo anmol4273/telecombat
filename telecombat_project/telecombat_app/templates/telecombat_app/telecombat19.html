@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<style>
+  .avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#dev{
+  font-family:'Alfa Slab One',cursive;
+  padding-left:82%;
+
+}
+#anm{
+    padding-left:82%;
+}
+h3{
+    font-family:'Alfa Slab One',cursive;
+}
+  body{
+    background:url(https://images.pexels.com/photos/2078271/pexels-photo-2078271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size:cover;
+    border:20px solid black;
+  }
+
+  h2{
+    font-family:'Alfa Slab One', cursive;
+  }
+  h4{
+    font-family:'Alfa Slab One', cursive;
+  }
+  #heading{
+    font-family:'Alfa Slab One', cursive;
+  }
+  p{
+
+      font-family:'Alfa Slab One', cursive;
+  }
+  .jumbotron{
+    font-family:'Alfa Slab One', cursive;
+    text-align:center;
+    border:10px solid black;
+  }
+span{
+  color:orange;
+
+}
+  </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="navbar-header">
+      <a href="{% url 'index'%}"  class="navbar-brand"><b>HOME</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+          <li><a href="{%url 'telecombat_app:departmentactivities'%}"><b>DEPARTMENT ACTIVITIES</b></a></li>
+          <li><a href=" {%url 'telecombat_app:studentachievements'%}"><b>STUDENT ACHIEVEMENTS</b></a></li>
+              <li><a href=" {%url 'telecombat_app:telecombat19'%}"><b>TELECOMBAT-19</b></a></li>
+      <li><a href=" {%url 'telecombat_app:telecombat18'%}"><b>GALLERY</b></a></li>
+
+
+  </ul>
+  </nav>
+<div class="container">
+<div  class="jumbotron">
+  <h1>TELE<span>COMBAT</span> 2019</h1>
+  <h5>"Projects we have completed demonstrate what we know-future projects decide what we will learn"</h5>
+</div>
+</div>
+<h2>About the Contest</h2>
+<p>The Department of Telecommunications Engineering,
+BMSCE,under IEEE Student chapter is organising a national level project contest “TELECOMBAT”,in an attempt to bring
+together many young engineering minds to demonstrate innovation and
+technology trends through their projects.</p>
+<h2>Important Details</h2>
+<ul>
+<li><p>Open for TE,EC,EE,ML and E&I Departments</p></li>
+<li><p>Team Size:2 to 4 members</p></li>
+<li><p>There are three tracks:</p></li>
+<li><p>Track A.Hardware projects without Processors</p></li>
+<li><p>Track B.Hardware projects with Processors</p></li>
+<li><p>Track C.Projects based on Simulation tools</p></li>
+<li><p>Best 2 projects in each track,take home <span>CASH PRIZES upto 25,000/-</span> per track.</p></li>
+<li><p>Last date to submit the abstract of project: 1-May-2019</p></li>
+<li><p>Fee:<ul id="heading"><li>Rs.600/- per team</li>
+          <li>Rs.500/- per team for IEEE Members</li></ul></p></li>
+          </ul>
+
+<h4>Date:<span>11-May-2019</span></h4>
+<h4>Venue:<span>Dept. of Telecommunication,BMSCE</span></h4>
+
+<h3>Faculty Coordinators:</h3>
+<p><img src="{% static "images/img_avatar.png" %}" alt="Avatar" class="avatar">Dr.Rajeshwari Hegde : telecombat@bmsce.ac.in
+<img src="{% static "images/img_avatar.png" %}" alt="Avatar" class="avatar">Dr.Prasanna Kumar MK : telecombat@bmsce.ac.in</p>
+<h3>Student Coordinators:</h3>
+<p>
+<img src="{% static "images/img_avatar.png" %}" alt="Avatar" class="avatar">Abishek : 8050826524 <img src="{% static "images/img_avatar.png" %}" alt="Avatar" class="avatar">Arvind P : 7026783434</p>
+
+<h5 id="dev">This website is Developed By:</h5>
+<p id="anm">
+<img src="{% static "images/img_avatar.png" %}" alt="Avatar" class="avatar">Anmol Agrawal</p>
+
+  </body>
+</html>

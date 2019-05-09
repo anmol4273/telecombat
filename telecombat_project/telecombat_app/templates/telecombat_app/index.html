@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+  <head>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<style>
+body{
+  border:20px solid black;
+  background:url(https://images.pexels.com/photos/2078271/pexels-photo-2078271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-size:cover;
+
+}
+.page-header h1{
+  font-family: 'Alfa Slab One', cursive;
+  font-size:50px;
+  text-align: center;
+
+}
+.page-header{
+
+}
+#text{
+  background: #f2f2f2;
+  font-family: 'Alfa Slab One', cursive;
+}
+#ans {
+  text-align:center;
+}
+#or{
+  color:orange;
+  text-align: center;
+}
+</style>
+    <title></title>
+  </head>
+  <body>
+  <div class="page-header">
+
+    <table>
+      <tr>
+
+  <td>
+  <h1 >TELE<span id="or">COMBAT<span> <small> 2<sup>nd</sup> National Level Project Contest</small></h1>
+
+</td>
+</tr>
+</table>
+</div>
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="navbar-header">
+    <a href="{% url 'index'%}"  class="navbar-brand"><b>HOME</b></a>
+  </div>
+  <ul class="nav navbar-nav">
+        <li><a href="{%url 'telecombat_app:departmentactivities'%}"><b>DEPARTMENT ACTIVITIES</b></a></li>
+        <li><a href=" {%url 'telecombat_app:studentachievements'%}"><b>STUDENT ACHIEVEMENTS</b></a></li>
+            <li><a href=" {%url 'telecombat_app:telecombat19'%}"><b>TELECOMBAT-19</b></a></li>
+    <li><a href=" {%url 'telecombat_app:telecombat18'%}"><b>GALLERY</b></a></li>
+
+
+</ul>
+</nav>
+<table border="1">
+  <tr>
+    <td id="text" width="800" height="300"><p>Global problems of today need to have global solutions being developed in a distributed manner worldwide. The global problems have so deeply rooted in terms of its criticality, imminence and rate of growth that nominal solutions are unable to provide sustainable solutions. Coincidently, ample infrastructure for realizing innovative solutions is affordable through governmental agencies, institutional support, R&D establishments and corporate CSR with no significant effort and cost.</p> <p> However, amidst such congenial ecosystem, innovative minds and their nurturing are at scarce and manifests as a show stopper in the process of realization of solutions. As such, nurturing young minds to appreciate complex problems and to think of innovative solutions either to alleviate prevalent problems or to
+improve the quality of life become the responsibility of technical institutions.</p><p>  Solutions devised, specifically, to address prevalent solutions are, specially, treated as projects for community services. Innovations under technology banner hovers, to a great extent, on electronics, telecommunications, networking, computer science and information technologies.
+improve the quality of life become the responsibility of technical institutions.</p></td>
+<td ><img src="{% static "images/LOGO.png" %}" alt="Image not found" width="600" height="500" ></td>
+  </tr>
+</table>
+</div>
+</div>
+  </body>
+</html>

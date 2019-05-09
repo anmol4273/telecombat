@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <style>
+    #Cli{
+      border:5px solid black;
+      margin:auto;
+      width:40%;
+    }
+
+      span{
+        color:orange;
+      }
+      h2{
+        font-family: 'Alfa Slab One', cursive;
+      }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background:url(https://images.pexels.com/photos/2078271/pexels-photo-2078271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+      background-size:cover;
+      margin: 0;
+      font-family: Arial;
+    }
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .column img:hover {
+      opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* The expanding image container */
+    .container {
+      position: relative;
+      display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Closable button inside the expanded image */
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="navbar-header">
+      <a href="{% url 'index'%}"  class="navbar-brand"><b>HOME</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+          <li><a href="{%url 'telecombat_app:departmentactivities'%}"><b>DEPARTMENT ACTIVITIES</b></a></li>
+          <li><a href=" {%url 'telecombat_app:studentachievements'%}"><b>STUDENT ACHIEVEMENTS</b></a></li>
+              <li><a href=" {%url 'telecombat_app:telecombat19'%}"><b>TELECOMBAT-19</b></a></li>
+      <li><a href=" {%url 'telecombat_app:telecombat18'%}"><b>GALLERY</b></a></li>
+
+
+  </ul>
+  </nav>
+<body>
+
+<div style="text-align:center">
+  <h2 id="Cli"><b>GLIMPSES-TELE<span>COMBAT</span> 2018</b></h2>
+  <p><b>Click on the images below:<b></p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="{% static "images/PIC1.jpg" %}" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static "images/PIC3.jpg" %}" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static "images/PIC5.jpg" %}" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static "images/PIC4.jpg" %}" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

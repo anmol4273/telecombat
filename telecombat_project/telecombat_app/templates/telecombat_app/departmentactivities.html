@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<style>
+
+
+#clubs{
+  font-family:'Alfa Slab One', cursive;
+}
+  body{
+
+   border:20px solid black;
+
+    background:url(https://images.pexels.com/photos/2078271/pexels-photo-2078271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-size:cover;
+
+
+  }
+#cd{
+  color:orange;
+  font-family:'Alfa Slab One', cursive;
+  margin:0;
+}
+  .container {
+    position: relative;
+    font-family: Arial;
+  }
+
+  .text-block1{
+    position:center;
+    bottom: 20px;
+    right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    width:61%;
+    background-color: white;
+    color:white;
+    border:4px solid black;
+  }
+  .text-block2{
+    border:4px solid black;
+    background-color: white;
+    color:white;
+    position:center;
+    bottom: 20px;
+    right: 2px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+    width:52%;
+  }
+  .text-block3 {
+    border:4px solid black;
+    background-color: white;
+    color:white;
+    position:center;
+    bottom: 20px;
+    right: 2px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+    width:37%;
+  }
+  .text-block4{
+    border:4px solid black;
+    background-color: white;
+    color:white;
+    position:center;
+    bottom: 20px;
+    right: 2px;
+
+
+    padding-left: 2px;
+    padding-right: 2px;
+    width:52%;
+  }
+  span{
+    color:orange;
+    font-family:'Alfa Slab One', cursive;
+
+  }
+  .jumbotron{
+    font-family:'Alfa Slab One', cursive;
+    text-align:center;
+    border:10px solid black;
+  }
+  </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-xs-12 col-lg-12">
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="navbar-header">
+      <a href="{% url 'index'%}"  class="navbar-brand"><b>HOME</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+          <li><a href="{%url 'telecombat_app:departmentactivities'%}"><b>DEPARTMENT ACTIVITIES</b></a></li>
+          <li><a href=" {%url 'telecombat_app:studentachievements'%}"><b>STUDENT ACHIEVEMENTS</b></a></li>
+              <li><a href=" {%url 'telecombat_app:telecombat19'%}"><b>TELECOMBAT-19</b></a></li>
+      <li><a href=" {%url 'telecombat_app:telecombat18'%}"><b>GALLERY</b></a></li>
+
+
+  </ul>
+  </nav>
+</div>
+</div>
+<div class="container" >
+
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-6   col-lg-12">
+    <h1>DEPARTMENT<span>ACTIVITIES</span></h1>
+</div>
+</div>
+</div>
+<div class="row">
+<h5 id="clubs"  div class="col-xs-12  col-lg-12" >There are several clubs at the department level managed by student coordinators along with faculty coordinators. The department also actively organises different workshops for students.</h5>
+</div>
+
+<div class="text-block1">
+  <div class="row">
+    <div class="col-xs-6   col-lg-12">
+
+    <h3 id="cd" class="col-xs-6   col-lg-12">CODING CLUB:MACHINE LEARNING WORKSHOP</h3>
+    <p></p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-lg-12">
+  <img src="{% static "images/codingclub.jpeg" %}" alt="Nature" width="700" height="400" class="thumbnail">
+</div>
+</div>
+
+  <div class="text-block2">
+    <div class="row">
+      <div class="col-xs-6   col-lg-12">
+      <h3 id="cd" class="col-xs-6   col-lg-12">DEPARTMENT STALL:PHASE SHIFT 2018</h3>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-lg-12">
+    <img src="{% static "images/stall.jpg" %}" alt="Nature" width="700" height="400" class="thumbnail">
+  </div>
+</div>
+
+    <div class="text-block3">
+      <div class="row">
+        <div class="col-xs-6   col-lg-12">
+        <h3 id="cd" class="col-xs-6   col-lg-12">INTERNATIONAL YOGA DAY</h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-lg-12">
+      <img src="{% static "images/yoga.jpg" %}" alt="Nature" width="700" height="400" class="thumbnail">
+</div>
+</div>
+      <div class="text-block4">
+        <div class="row">
+          <div class="col-xs-6   col-lg-12">
+          <h3 id="cd" class="col-xs-6   col-lg-12">HAM CLUB:AMATEUR RADIO WORKSHOP</h3>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-lg-12">
+        <img src="{% static "images/ham.jpg" %}" alt="Nature" width="700" height="400" class="thumbnail">
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
